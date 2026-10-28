@@ -1,49 +1,67 @@
-# Kheti Sahayak
+# 🌱 Kheti Sahayak — AI-Powered Agriculture Assistant
 
-Kheti Sahayak is an agricultural GenAI project for farmers and farmland managers. It keeps the original landing and workspace-selection screens and adds a working authentication step after role selection, an agricultural AI copilot, crop-photo analysis, a calendar, live weather, and crop-economics calculators.
+Kheti Sahayak is an AI-powered agriculture platform designed to help farmers access agricultural guidance, crop insights, and useful farming information through a single application.
+
 LIVE: https://kheti-sahayak.netlify.app/
-## Stack
 
-- Frontend: React, TypeScript, Vite, Lucide
-- Authentication: Supabase Auth (email/password)
-- API: FastAPI
-- GenAI: OpenAI Chat Completions API; vision-enabled model for uploaded crop images
-- Weather: Open-Meteo geocoding and forecast API
+## ✨ Features
 
-## Quick start
+- 🤖 **AI Chatbot:** Get agricultural guidance through an AI-powered conversational interface.
+- 🌿 **Crop Image Analysis:** Explore crop-related insights using image analysis.
+- 🌦️ **Weather Forecasts:** Access weather information to support farming decisions.
+- 📊 **Crop Economics:** Explore tools related to crop costs and farming economics.
 
-Read [START_HERE.md](START_HERE.md) for environment configuration and full steps.
+## 🛠️ Tech Stack
 
-## Environment variables
+- **Frontend:** React, TypeScript
+- **Backend:** FastAPI
+- **Database & Authentication:** Supabase
+- **AI Integration:** NVIDIA API
+- **Weather Data:** Open-Meteo
 
-`client/.env` (copy from `client/.env.example`):
+## 🚀 Getting Started
 
-- `VITE_SUPABASE_URL`: your Supabase project URL
-- `VITE_SUPABASE_PUBLISHABLE_KEY` or `VITE_SUPABASE_ANON_KEY`: browser-safe public key
-- `VITE_API_URL`: optional deployed backend URL; local default is `http://localhost:8000`
+### Prerequisites
 
-`backend/.env` (copy from `backend/.env.example`):
+- Node.js and npm
+- Python
+- Supabase project credentials
+- NVIDIA API key
+- Open-Meteo access, if required by your implementation
 
-- `OPENAI_API_KEY`: your OpenAI API key
-- `OPENAI_MODEL`: defaults to `gpt-4o-mini`
-- `CORS_ORIGINS`: comma-separated frontend origins
+### Installation
 
-Never commit `.env` files or expose an OpenAI key or Supabase service-role key in the frontend.
+1. Clone the repository:
 
-## GenAI pipeline
+   ```bash
+   git clone https://github.com/nidhidev2122/kheti-sahayak.git
+   cd kheti-sahayak
+   ```
 
-1. **Input and context:** question, user role, crop/land use, location, soil, farm size, optional crop image.
-2. **Prompt assembly:** context is placed into an agricultural decision-support prompt.
-3. **Model inference:** FastAPI sends the request to the configured OpenAI model.
-4. **Safety-aware response:** guidance separates assumptions from facts and flags high-impact decisions for local expert verification.
+2. Install the frontend dependencies from the directory containing its `package.json`:
 
-## Current data boundaries
+   ```bash
+   npm install
+   ```
 
-Supabase is used for authentication. Calendar entries are saved in browser local storage. The crop calculator computes estimates from user-provided assumptions. The landlord/farmer overview still includes some illustrative demo content and does not yet persist farm, tenant, lease, or payment records in a shared database. AI output is advisory and should be verified for high-impact crop, pesticide, legal, and financial decisions.
+3. Install backend dependencies using the project's requirements file, if provided:
 
-## Checks
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-```bash
-npm run check
-python -m unittest discover -s backend/tests -v
-```
+4. Configure the required environment variables using the variable names expected by your application.
+
+5. Start the frontend and backend using the commands defined in your project configuration.
+
+**Security:** Never commit API keys, passwords, or private environment files to GitHub.
+
+## 🎯 Goal
+
+To make agricultural information and digital farming tools more accessible through an AI-assisted platform.
+
+## 👩‍💻 Developer
+
+**Nidhi Dev**
+
+- GitHub: [@nidhidev2122](https://github.com/nidhidev2122)
