@@ -1,7 +1,7 @@
 # Kheti Sahayak
 
 Kheti Sahayak is an agricultural GenAI project for farmers and farmland managers. It keeps the original landing and workspace-selection screens and adds a working authentication step after role selection, an agricultural AI copilot, crop-photo analysis, a calendar, live weather, and crop-economics calculators.
-
+LIVE: https://kheti-sahayak.netlify.app/
 ## Stack
 
 - Frontend: React, TypeScript, Vite, Lucide
